@@ -18,4 +18,4 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: rsync deploy
-        run: rsync -auzrv -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p 10022" --delete ./dist/* zipzapweb@sv3072.xserver.jp:/home/zipzapweb/develop36-2.site/public_html/ga/ --exclude .htaccess
+        run: rsync -auzrv -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p 10022" --delete ./dist/* zipzapweb@sv3072.xserver.jp:/home/zipzapweb/zipzap.jp/public_html/ga/ --exclude .htaccess
